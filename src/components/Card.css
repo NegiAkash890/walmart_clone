@@ -1,0 +1,31 @@
+.card_container {
+  border: 1px solid lightgray;
+  max-width: 300px;
+  min-height: 300px;
+  margin: 50px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+img {
+  max-width: 100%;
+}
+.card_container > h3 {
+  text-align: left;
+  margin-left: 10px;
+  margin-top: 15px;
+  font-weight: 800;
+  font-size: 14px;
+}
+.card_body {
+  padding: 30px;
+}
+.card_body > p {
+  font-weight: 800;
+}
+.card_body > em {
+  font-size: 12px;
+}
+button {
+  padding: 10px 10px;
+}
