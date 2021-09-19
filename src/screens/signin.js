@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react'
+import { useAlert } from 'react-alert'
 import { useHistory } from 'react-router-dom'
 import { useStatevalue } from '../context/StateProvider'
 import { auth } from '../firebase'
@@ -8,6 +9,7 @@ import './Signin.css'
 
 function Signin() {
     const history = useHistory()
+    const alert = useAlert()
     const email = useRef(null)
     const password = useRef(null)
     const [{user} , dispatch] = useStatevalue()
@@ -22,13 +24,13 @@ function Signin() {
                     type:"ADD_USER" ,
                     user : auth.user.email
                 })
-                history.push("/")
+                history.push("/home")
                 console.log(user)
             
             }
         })
         .catch((err)=>{
-            alert(err.message)
+            alert.error(err.message)
         })
     
     }
@@ -40,10 +42,10 @@ function Signin() {
         .then((auth)=>{
             if(auth){
                 console.log(auth)
-                history.push("/")
+                history.push("/home")
             }
         })
-        .catch((err)=>alert(err.message))
+        .catch((err)=>alert.error(err.message))
     }
 
     return (
@@ -69,6 +71,7 @@ function Signin() {
                  <h3>Don't have an account ?</h3>
                  <button id='new_account' type='submit' onClick={(e)=>createAccount(e)}>Create account </button>
              </div>
+             <em id='note'>Note : Fill Details and Click Create Account Button</em>
            </form>
            <div></div>
             

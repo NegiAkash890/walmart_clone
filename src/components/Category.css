@@ -1,0 +1,36 @@
+.category_card{
+    display: flex;
+    list-style: none;
+    overflow: auto;
+    color: #eee;
+    margin: 1rem;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.category_card::-webkit-scrollbar {
+      display: none;
+  }
+  
+  /* Hide scrollbar for IE, Edge and Firefox */
+.category_card {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.collection_card{
+    background-color: royalblue;
+    padding: 2rem 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.9rem;
+    border-radius: 5px;
+    margin: 1rem 0.5rem;
+    min-width: 380px;
+}
+@media (max-width: 500px){
+    .card_container {
+    display: flex;
+    min-width: 100%;
+    }
+}

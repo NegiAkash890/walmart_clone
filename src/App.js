@@ -25,7 +25,7 @@ function App() {
       if(user){
         dispatch({
           type:"ADD_USER" ,
-          user:user
+          user:user.email
         })
       }
       else{
@@ -40,9 +40,7 @@ function App() {
     <Router>
     <div className="App">
       <Switch>
-        <Route path='/login'>
-          <Signin/>
-        </Route>
+      
         <Route path='/account'>
           <NavBar/>
           <Account/>
@@ -51,9 +49,12 @@ function App() {
           <NavBar/>
           <Cart/>
         </Route>
-        <Route exact path='/'>
+        <Route exact path='/home'>
           <NavBar/>
           <Home/>
+        </Route>
+          <Route path='/'>
+          <Signin/>
         </Route>
       </Switch>
     </div>

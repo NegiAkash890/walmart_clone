@@ -1,15 +1,15 @@
 import React from 'react'
 import './Card.css'
-function Card() {
+function Card({heading , pic , summary,subtext , btntxt}) {
     return (
         <div className='card_container'>
-           <h3>Pickup or delivery</h3>  
+           <h2>{heading}</h2>  
            <div className='card_body'>
-             <img src='https://i5.walmartimages.com/dfw/4ff9c6c9-3170/k2-_7c012544-6e3d-4e4d-a9d7-148bd7eae274.v1.jpg?odnWidth=320&odnHeight=140&odnBg=ffffff'/>
-             <p>Groceries & even more</p>
-             <em>1919 Davis St , San Leandro</em>
+             <img src={pic} alt='product_image'/>
+             <p>{summary}</p>
+             <small>{subtext}</small>
            </div>
-           <button>Place Order</button>
+           <button style={{display:`${btntxt}`}} className='card_btn'>{btntxt}</button>
         </div>
     )
 }

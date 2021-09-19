@@ -1,7 +1,19 @@
 *{
     box-sizing: border-box;
     margin: 0px;
-    padding: 0px
+    padding: 0px;
+    outline:none; 
+    font-size: 1rem ;
+    transition: 0.5s ease all;
+}
+::root{
+ --darkBorder : #000000 ;
+ --lightBorder : #eee ;
+ --lighterBorder: white ;
+ --lightColor : #eee ;
+ --lighterColor : white ;
+ --darkColor : #000000;
+
 }
 body {
   margin: 0;

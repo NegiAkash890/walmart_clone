@@ -1,8 +1,103 @@
+.home {
+  background-color: white;
+}
 .home > h3 {
-    background-color:#0071DC;
-    margin-top: 55px;
-    color: white;
-    font-weight: 400;
-    font-size: 14px;
-    padding: 20px;
+  background-color: #0071dc;
+  margin-top:3.75rem;
+  color: white;
+  font-weight: 400;
+  font-size: 0.875rem;
+  padding: 1.25rem;
+}
+
+.header_cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0rem auto;
+ 
+}
+.category_container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.clothing_category,
+.outdoor_category{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.section_heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  font-weight: 400;
+  margin-top: 10px;
+}
+.main_poster_container{
+  display: flex;
+  min-height: 400px;
+  max-height: 400px;
+  position: relative;
+}
+.left_poster_section{
+  position: absolute;
+  margin: 3rem;
+  color: white;
+}
+.left_poster_section > h1{
+  margin-bottom: 0.5rem;
+  font-size: 1.8rem;
+}
+.left_poster_section > p{
+  font-size: 1rem;
+}
+.right_poster_section > img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+}
+@media (max-width: 500px) {
+  .home {
+    padding: 0px;
+  }
+  .right_poster_section > img{
+    object-fit: cover;
+    object-position: right;
+  }
+  .home > h3 {
+    font-size: 12px;
+    margin-top: 70px;
+    text-align: center;
+  }
+  .home > h1 {
+    font-size: 20px;
+    text-align: center;
+    padding: 10px;
+  }
+  .home > h4 {
+    font-size: 25px;
+    margin-top: 20px;
+    margin-left: 10px;
+  }
+  .tv_section {
+    width: 100%;
+    text-align: left;
+  }
+.main_poster_container{
+  display: flex;
+  flex-direction: column;
+}
+.header_cards {
+  width: 100%;
+}
+  #main_poster{
+      height: 300px;
+
+  }
 }

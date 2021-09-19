@@ -4,18 +4,23 @@ import './index.css';
 import App from './App';
 import {StateProvider} from './context/StateProvider';
 import reducer,{ intialState } from './context/reducer';
+import AlertTemplate from 'react-alert-template-basic'
+import {Provider as AlertProvider} from 'react-alert'
 
-
+const options = {
+  position: 'bottom center',
+  timeout: 4000,
+  offset: '30px',
+  transition: 'fade'
+}
 ReactDOM.render(
   <React.StrictMode>
+    <AlertProvider template={AlertTemplate} {...options}>
     <StateProvider intialState={intialState} reducer={reducer}>
     <App />
     </StateProvider>
+    </AlertProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-;

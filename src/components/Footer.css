@@ -1,0 +1,119 @@
+.footer {
+  padding: 10px 10px;
+  background-color: #eeeeee;
+ 
+}
+.upper_footer {
+  padding: 50px 0px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 1rem;
+}
+
+.footer_search {
+  display: flex;
+  min-width: 400px;
+  border: 1px solid black;
+}
+.footer_search > input {
+  padding: 20px;
+  width: 400px;
+  border: none;
+}
+.footer_search > button {
+  border: none;
+  padding: 20px 40px;
+  background-color: black;
+  color: white;
+}
+.sign_up {
+  margin: -5px;
+  cursor: pointer;
+  border: none;
+  color: white;
+  font-weight: 600;
+  padding: 10px;
+  background-color: black;
+}
+.social_media {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+.social_media > a {
+  margin-right: 10px;
+  color: black;
+}
+.explore {
+  margin: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.explore_items {
+  display: flex;
+  flex-direction: column;
+}
+.explore_items > p {
+  font-weight: 600;
+}
+.explore_items > a {
+  font-size: 13px;
+  font-weight: 400;
+  color: rgb(98, 94, 94);
+  text-decoration: none;
+  margin-top: 10px;
+}
+.copyright {
+  margin: 1rem;
+  padding: 10px 0px;
+  font-size: 13px;
+  font-weight: 400;
+  display: flex;
+  color: rgb(98, 94, 94);
+  justify-content: space-between;
+  border-top: 1px solid lightgrey;
+}
+@media (max-width:500px){
+  .footer_search{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    min-width: 90vw;
+    border: none;
+    flex-direction: column;
+  }
+  .footer_search>input{
+    padding: 10px 20px;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+ .upper_footer{
+     justify-content: center;
+ }    
+ .social_media{
+     display: block;
+     justify-content: space-evenly;
+     margin: 1rem;
+ }
+ .explore{
+     margin-top: 0px;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     flex-wrap: wrap;
+ }
+ .explore_items{
+    margin-top: 10px;
+   font-size: 14px;
+ }
+ .explore_items >a{
+    display: none;
+ }
+ .copyright{
+     color: grey;
+     flex-direction: column;
+     text-align: center;
+ }
+}
