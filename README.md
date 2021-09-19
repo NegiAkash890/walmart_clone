@@ -1,4 +1,4 @@
-## `Walmart Clone`
+## Walmart Clone
 
 ### ABOUT
 ---
